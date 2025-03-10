@@ -1,12 +1,11 @@
 
-name = "data" # Name of file
-
-# Establish data path, Finds name and path automagically
-from os import path
-cFilePath = path.realpath(__file__)
-cFileName = path.basename(__file__)
-cFile = cFilePath.rstrip(cFileName)
-path = f"{cFile}{name}.dat" # Data File Path
+# Establish data path, Find name and path automagically
+def autoPath(name):
+    from os import path
+    currentFile = path.realpath(__file__)
+    currentFileName = path.basename(__file__)
+    currentFilePath = currentFile.rstrip(currentFileName)
+    path = f"{cFile}{name}.dat" # Data File Path
 
 # Read Data Line
 def readLine(path, lineNum):
